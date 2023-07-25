@@ -188,10 +188,10 @@ tourSchema.pre(/^find/, function (next) {
 });
 
 // this middleware is going to run after the query has already executed
-tourSchema.post(/^find/, function (docs, next) {
-  console.log(`Query took ${Date.now() - this.start} miliseconds!`);
-  next();
-});
+// tourSchema.post(/^find/, function (docs, next) {
+//   console.log(`Query took ${Date.now() - this.start} miliseconds!`);
+//   next();
+// });
 
 // AGGREGATION MIDDLEWARE
 // tourSchema.pre('aggregate', function (next) {
