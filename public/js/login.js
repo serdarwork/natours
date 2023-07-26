@@ -1,12 +1,13 @@
 /* eslint-disable */
-import axios from 'axios';
 import { showAlert } from './alerts';
 
 export const login = async (email, password) => {
   try {
+    debugger;
+
     const res = await axios({
       method: 'POST',
-      url: 'https://serene-temple-63705-9f88ad6f27e0.herokuapp.com/api/v1/users/login',
+      url: '/api/v1/users/login',
       data: {
         email,
         password,
@@ -20,7 +21,6 @@ export const login = async (email, password) => {
       }, 1500);
     }
   } catch (err) {
-    console.dir(err);
     showAlert('error', err.response.data.message);
   }
 };
@@ -29,7 +29,7 @@ export const logout = async () => {
   try {
     const res = await axios({
       method: 'GET',
-      url: 'https://serene-temple-63705-9f88ad6f27e0.herokuapp.com/api/v1/users/logout',
+      url: '/api/v1/users/logout',
     });
     if ((res.data.status = 'success')) location.reload(true);
   } catch (err) {

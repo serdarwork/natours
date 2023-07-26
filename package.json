@@ -47,6 +47,7 @@
     "xss-clean": "^0.1.4"
   },
   "devDependencies": {
+    "@parcel/reporter-bundle-buddy": "^2.9.3",
     "buffer": "^6.0.3",
     "eslint": "^8.41.0",
     "eslint-config-airbnb": "^19.0.4",
