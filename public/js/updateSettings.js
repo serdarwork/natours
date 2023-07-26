@@ -7,8 +7,8 @@ export const updateSettings = async (data, type) => {
   try {
     const url =
       type === 'password'
-        ? '/api/v1/users/updateMyPassword'
-        : '/api/v1/users/updateMe';
+        ? 'https://serene-temple-63705-9f88ad6f27e0.herokuapp.com/api/v1/users/updateMyPassword'
+        : 'https://serene-temple-63705-9f88ad6f27e0.herokuapp.com/api/v1/users/updateMe';
 
     const res = await axios({
       method: 'PATCH',

@@ -6,7 +6,7 @@ export const login = async (email, password) => {
   try {
     const res = await axios({
       method: 'POST',
-      url: '/api/v1/users/login',
+      url: 'https://serene-temple-63705-9f88ad6f27e0.herokuapp.com/api/v1/users/login',
       data: {
         email,
         password,
@@ -28,7 +28,7 @@ export const logout = async () => {
   try {
     const res = await axios({
       method: 'GET',
-      url: '/api/v1/users/logout',
+      url: 'https://serene-temple-63705-9f88ad6f27e0.herokuapp.com/api/v1/users/logout',
     });
     if ((res.data.status = 'success')) location.reload(true);
   } catch (err) {
